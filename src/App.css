@@ -1,0 +1,69 @@
+.Main {
+  width: 80%;
+  max-width: 720px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.Main > h1 {
+  font-size: 1.4rem;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+  margin-top: 12px;
+}
+
+.App-copyright {
+  text-align: right;
+  font-weight: 1.1rem;
+  margin-top: 12px;
+}
+
+.App > div {
+  padding: 36px;
+}
+
+.App-people {
+  width: 30%;
+}
+
+.App-random {
+  flex: 1;
+  border-left: 1px solid red;
+  background-color: white;
+}
+
+.App-delete {
+  width: 12px;
+  cursor: pointer;
+}
+
+.App-random-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-random-title > h2 {
+  font-size: 1.2rem;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.App-random-reload {
+  width: 12px;
+  cursor: pointer;
+}
+
+.App-list > li {
+  padding: 12px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+  border-radius: 4px;
+  margin-top: 6px;
+}
