@@ -1,5 +1,6 @@
 import './App.css';
 import close from "./close.svg";
+import tick from "./tick.svg";
 import refresh from "./reload.svg";
 import axios from "axios";
 import { useEffect, useState } from 'react';
@@ -51,6 +52,9 @@ function App() {
   const randomisePeople = () => {
     setRandomisedPeople(shuffle([...people]));
   };
+  const removeRandomisedPerson = (id) => {
+    setRandomisedPeople(randomisedPeople.filter(rPerson => rPerson.id !== id));
+  }
   useEffect(randomisePeople, [people])
   useEffect(() => {
     peopleService.get("/people").then(({ data }) => {
@@ -87,11 +91,17 @@ function App() {
                 <img src={refresh} alt="refresh" />
               </span>
             </div>
-            <ul className="App-list">
+            <ul className="App-list App-random-list">
               {
-                randomisedPeople.map(person => {
+                randomisedPeople.map((person, i) => {
                   return <li key={person.id}>
                     <span>{person.name}</span>
+                    {
+                      i === 0 ?
+                      <span onClick={() => removeRandomisedPerson(person.id)} className="App-delete">
+                        <img src={tick} alt="delete" />
+                      </span> : null
+                    }
                   </li>;
                 })
               }
