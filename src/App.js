@@ -70,9 +70,9 @@ function App() {
               people.map(person => {
                 return <li key={person.id}>
                   <span>{person.name}</span>
-                  <a onClick={() => removePerson(person.id)} className="App-delete">
+                  <span onClick={() => removePerson(person.id)} className="App-delete">
                     <img src={close} alt="delete" />
-                  </a>
+                  </span>
                 </li>;
               })
             }
@@ -83,9 +83,9 @@ function App() {
           <div className="App-random">
             <div className="App-random-title">
               <h2>Randomised List</h2>
-              <a onClick={randomisePeople} className="App-random-reload">
+              <span onClick={randomisePeople} className="App-random-reload">
                 <img src={refresh} alt="refresh" />
-              </a>
+              </span>
             </div>
             <ul className="App-list">
               {
