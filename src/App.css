@@ -41,6 +41,10 @@
   cursor: pointer;
 }
 
+.App-random-delete {
+  width: 18px;
+}
+
 .App-random-title {
   display: flex;
   justify-content: space-between;
@@ -59,13 +63,16 @@
 }
 
 .App-list > li {
-  padding: 12px 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid red;
   border-radius: 4px;
   margin-top: 6px;
+}
+
+.App-list > li > span {
+  padding: 12px;
 }
 
 .App-random-list > li:first-child {
