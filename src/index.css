@@ -51,7 +51,8 @@ table {
 }
 input {
   box-sizing: border-box;
-  padding: 6px;
+  font-size: 0.8rem;
+  padding: 9px;
   width: 100%;
 }
 img {
